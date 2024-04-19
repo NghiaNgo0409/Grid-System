@@ -1,6 +1,8 @@
 /* X-Small devices (portrait phones less than 576px) */
 /* No media query for 'xs' since this is the default in Bootstrap */
-.container {
+.container,
+.container-fluid {
+    --spacer: 6px;
     --column-size: 12;
 
     width: 100%;
@@ -8,10 +10,6 @@
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
-}
-
-.container-fluid {
-    width: 100%;
 }
 
 .row {
@@ -175,6 +173,10 @@
         max-width: 540px;
     }
 
+    .g-sm-0 {
+        --spacer: 0;
+    }
+
     .row-cols-sm-1 > * {
         --row-cols-number: 1;
     }
@@ -302,6 +304,10 @@
         --spacer: 16px;
 
         max-width: 720px;
+    }
+
+    .g-md-0 {
+        --spacer: 0;
     }
 
     .row-cols-md-1 > * {
@@ -433,6 +439,10 @@
         max-width: 960px;
     }
 
+    .g-lg-0 {
+        --spacer: 0;
+    }
+
     .row-cols-lg-1 > * {
         --row-cols-number: 1;
     }
@@ -560,6 +570,10 @@
         max-width: 1170px;
     }
 
+    .g-xl-0 {
+        --spacer: 0;
+    }
+
     .row-cols-xl-1 > * {
         --row-cols-number: 1;
     }
@@ -685,6 +699,10 @@
 @media (min-width: 1400px) {
     .container {
         max-width: 1320px;
+    }
+
+    .g-xl-0 {
+        --spacer: 0;
     }
 
     .row-cols-xxl-1 > * {
